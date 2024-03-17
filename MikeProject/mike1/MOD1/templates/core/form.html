@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+
+{% block title %} User Registration {% endblock %}
+
+{% block content %}
+<section class="container mx-auto px-4 py-8">
+  <h2 class="text-2xl font-bold mb-4">Join Mickey's Sacco</h2>
+
+  <form class="w-full max-w-sm mx-auto bg-white shadow-md rounded-md px-8 py-6" method="post">
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+          Username
+        </label>
+        <input type="text" id="username" name="username" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300" required>
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="middle_name">
+          Middle Name (Optional)
+        </label>
+        <input type="text" id="middle_name" name="middle_name" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300">
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="national_id">
+          National ID/Passport
+        </label>
+        <input type="text" id="national_id" name="national_id" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300" required>
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone_number">
+          Phone Number
+        </label>
+        <input type="tel" id="phone_number" name="phone_number" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300" required>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="date_of_birth">
+          Date of Birth
+        </label>
+        <input type="date" id="date_of_birth" name="date_of_birth" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300">
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="occupation">
+          Occupation
+        </label>
+        <input type="text" id="occupation" name="occupation" class="shadow-sm rounded-md w-full px-3 py-2 text-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-gray-300">
+      </div>
+    </div>
+    <div class="flex items-center mt-4">
+      <button type="submit" class="shadow-sm rounded-md bg-blue-500 py-2 px-4 text-white font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+        Register
+      </button>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block title %} <title> </title>| Mikey {% endblock %}
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-gray-800 text-white">
+    <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <a href="#" class="font-bold text-xl">Mickey's Sacco</a>
+      <ul class="flex space-x-4">
+        <li><a href="{% url 'about' %}" class="hover:text-gray-200">About Us</a></li>
+        <li><a href="#" class="hover:text-gray-200">Services</a></li>
+        <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+      </ul>
+    </nav>
+   </header>
+
+  <main>
+	  {% block content %} {% endblock %}
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; Mickey's Sacco 2024</p>
+    <p>&copy; Developed by MR. Philip Njoroge</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends  'core/base.html' %}
+
+{% block title  %}
+<title> homepage </title>
+{% endblock %}
+
+
+{% block content %}
+
+<main>
+<div class="container mx-auto px-8 py-8 h-screen overflow-auto"> <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold">Welcome, {{ user_all.username }}</h1>
+    <!-- <img src="MOD1\templates\core\images\Default_greek_gods_playing_basketball_1.jpg" alt="User Profile Picture" class="w-12 h-12 rounded-full"> -->
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-gray-100 p-4 rounded-md shadow-md">
+      <h2 class="text-xl font-bold mb-2">Account Information</h2>
+      <!-- <img src="path/to/account_info_icon.png" alt="Account Information Icon" class="w-8 h-8 mb-2 inline-block"> <ul class="list-none space-y-2"> -->
+        <li class="flex items-center">
+          <span class="text-gray-600 w-32">Account Number:</span>
+          <span>{{ user_all.account_number }}</span>
+        </li>
+        <li class="flex items-center">
+          <span class="text-gray-600 w-32">Membership Status:</span>
+          <span>{{ user_all.membership_status }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-4 rounded-md shadow-md">
+      <h2 class="text-xl font-bold mb-2">Finances</h2>
+      <!-- <img src="path/to/finance_icon.png" alt="Finances Icon" class="w-8 h-8 mb-2 inline-block"> <ul class="list-none space-y-2"> -->
+        <li class="flex items-center">
+          <span class="text-gray-600 w-32">Savings Balance:</span>
+          <span class="font-bold">{{ user_all.account.balance }}</span> (Ksh)
+        </li>
+        <li class="flex items-center">
+          <span class="text-gray-600 w-32">Available Loan:</span>
+          <span class="font-bold">{{ user_all.get_available_loan_amount }}</span> (Ksh)
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 flex justify-center"> <a href="#" class="btn bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Make a Deposit</a>
+    <a href="#" class="btn bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md ml-4">Apply for Loan</a>
+  </div>
+
+</div>
+</main>
+{%  endblock %}
